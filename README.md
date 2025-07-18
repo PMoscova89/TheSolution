@@ -17,7 +17,7 @@ Each problem comes with:
 My main reason for creating this repo is twofold:
 
 1. **Help Others:**  
-   I wanted a resource where anyone—beginner, student, or interviewer—can not only see working code, but also practice writing their own, using the clearly scaffolded `BlankSolution` class. This makes it easier to build real understanding and confidence.
+   I wanted a resource where anyone (beginner, student, or interviewer)can not only see working code, but also practice writing their own, using the `BlankSolution` class. This makes it easier to build real understanding and confidence.
 
 2. **"Patrick was here."**  
    I also wanted to leave my mark. If you stumbled onto my GitHub out of curiosity (or maybe while prepping for an interview, or snooping around before hiring me), I want you to see at a glance:  
@@ -25,7 +25,7 @@ My main reason for creating this repo is twofold:
    - I care about code clarity and maintainability  
    - I put in the work  
    
-   It’s a bit of a personal signature—my way of saying, “Yeah, I was here, and I can do this.”
+   It’s a bit of my way of saying, “Yeah, I was here, and I can do this.”
 
 ---
 
@@ -35,7 +35,7 @@ My main reason for creating this repo is twofold:
 - Practice filling out the `BlankSolution` class first (the comments guide you step-by-step).
 - When you’re ready, check your answer against the `Solution` class.
 - Rinse and repeat for as many problems as you want!
-
+- (More problems on the way. If I got it wrong during a stressful technical interview. I put it here)
 ---
 
 ## Contributions
