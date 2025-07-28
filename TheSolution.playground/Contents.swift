@@ -142,6 +142,118 @@ let cheeseMaze: [[Character]] = [
 ]
 let mouseStartPosition = (0, 0) // 'S' location
 
+let mouseMazeOne: [[Character]] = [
+    ["O", "O", "C"],
+    ["O", "X", "O"],
+    ["M", "O", "O"]
+]
+
+// Mouse starts at (2, 0)
+let mouseMazeOneStart = (2, 0)
+
+let mouseMazeTwo: [[Character]] = [
+    ["M", "O", "O", "O"],
+    ["X", "X", "X", "O"],
+    ["O", "O", "O", "C"]
+]
+
+// Mouse starts at (0, 0)
+let mouseMazeTwoStart = (0, 0)
+
+let mouseMazeThree: [[Character]] = [
+    ["X", "M", "O"],
+    ["X", "X", "O"],
+    ["C", "O", "O"]
+]
+
+// Mouse starts at (0, 1)
+let mouseMazeThreeStart = (0, 1)
+
+let mouseMazeFour: [[Character]] = [
+    ["M", "X", "C"],
+    ["X", "X", "X"],
+    ["O", "O", "O"]
+]
+
+// Mouse starts at (0, 0)
+let mouseMazeFourStart = (0, 0)
+
+let mouseMazeFive: [[Character]] = [
+    ["M", "X", "O"],
+    ["O", "X", "C"],
+    ["O", "X", "O"]
+]
+
+// Mouse starts at (0, 0)
+let mouseMazeFiveStart = (0, 0)
+
+let mouseMazeSix: [[Character]] = [
+    ["M", "X", "X", "X"],
+    ["X", "X", "X", "X"],
+    ["X", "X", "C", "X"]
+]
+
+// Mouse starts at (0, 0)
+let mouseMazeSixStart = (0, 0)
+
+let mouseMazeSeven: [[Character]] = [
+    ["M", "O", "X", "C"],
+    ["O", "O", "O", "O"]
+]
+
+// Mouse starts at (0, 0)
+let mouseMazeSevenStart = (0, 0)
+
+let mouseMazeEight: [[Character]] = [
+    ["X", "M", "O", "O"],
+    ["O", "X", "X", "O"],
+    ["O", "O", "O", "O"],
+    ["O", "X", "C", "X"]
+]
+
+// Mouse starts at (0, 1)
+let mouseMazeEightStart = (0, 1)
+
+let mouseMazeNine: [[Character]] = [
+    ["M", "O", "O"],
+    ["X", "X", "O"],
+    ["O", "O", "O"],
+    ["X", "X", "O"],
+    ["O", "C", "O"]
+]
+
+// Mouse starts at (0, 0)
+let mouseMazeNineStart = (0, 0)
+
+let mouseMazeTen: [[Character]] = [
+    ["M", "X", "C"],
+    ["X", "X", "X"],
+    ["O", "O", "O"]
+]
+
+// Mouse starts at (0, 0)
+let mouseMazeTenStart = (0, 0)
+
+let mouseMazeEleven: [[Character]] = [
+    ["M", "O", "X", "O", "O"],
+    ["X", "X", "X", "X", "X"],
+    ["O", "O", "O", "O", "O"],
+    ["C", "X", "X", "X", "X"]
+]
+
+// Mouse starts at (0, 0)
+let mouseMazeElevenStart = (0, 0)
+
+let mouseMazeTwelve: [[Character]] = [
+    ["M", "X"],
+    ["O", "X"],
+    ["O", "X"],
+    ["O", "X"],
+    ["O", "X"],
+    ["C", "X"]
+]
+
+
 // MARK: - Uniform Integers in Interval
 let uniformIntervalA = 1
 let uniformIntervalB = 100
@@ -1453,6 +1565,42 @@ class BlankSolution {
         // 4. Return minimum.
         return 0
     }
+    
+    // 49. Mouse cheese
+    func findCheese(_ maze: [[Character]], mousePosition: (Int, Int)) -> Bool {
+        return false
+        // 1.) Get the row count
+        // 2.) Get the column count
+        // 3.) Check if either of those are zero. If they are, return false
+        // 4.) create a repeating array of booleans inside a repeating array of booleans.
+        // All of them are defaulted to false. It's a 2D array of false booleans. Make one
+        // 5.) Create an array of directions. Up down left and right. Remember graphing paper and x y coordinates
+        // 6.) create a queue with one object in it. The mouse position you were given. You can use swift arrays as queues because of the "removeFirst" function. More on that later
+            // 7.) while the queue is not empty. Remove the first object. Using the removeFirst() function preferably
+            // 8.) Check the failure case. If it's out of bounds. If it hits a wall. Or if it's visted. You don't need to do what else is in this while loop. Get out of there
+            // 9.) Check the success case. If the current maze index/position/whatever is "C" for cheese then we can return true.
+            // 10.) That repeating array of false booleans. Set the one corresponding to this position to true. So we can check it
+            // 11.) Use the cardinal directions we created before to appened more to the queue. This is how we keep the while loop going for as long as possible. (We thorough over here)
+        // 12.) If after all that we didn't hit cheese. Return false.
+        
+    }
+    
+    func findUniqueRobotMazePaths(_ n: Int) -> [String] {
+        return []
+        // 1.) Create an empty array called results to hold the final paths
+        // 2.) Create a queue that holds tuples of (path, row, column).
+        //     Initialize it with an empty path "" starting at row 0, column 0
+        // 3.) While the queue is not empty, remove the first tuple (path, row, column)
+        // 4.) Check if the robot is at the bottom-right corner (row == n - 1 and column == n - 1)
+        //     If so, add the current path to results and skip the rest of this loop iteration
+        // 5.) If the robot can move right (column < n - 1), append a new tuple to the queue:
+        //     current path + "R", same row, column + 1
+        // 6.) If the robot can move down (row < n - 1), append a new tuple to the queue:
+        //     current path + "D", row + 1, same column
+        // 7.) After the queue is empty, return the results array
+    }
+
+    
 }
 
 //MARK: - SOLUTION CLASS
@@ -2546,6 +2694,60 @@ class Solution {
         
         // 5) answer is the best you can do ending at the largest clamp
         return dp.last!
+    }
+    
+    // 49. Mouse cheese
+    func findCheese(_ maze: [[Character]], mousePosition: (Int, Int)) -> Bool {
+        let rows = maze.count
+        let columns = maze.first?.count ?? 0
+        
+        if rows == 0 || columns == 0 {
+            return false
+        }
+        
+        var visited = Array(repeating: Array(repeating: false, count: columns), count: rows)
+
+        let directions = [(-1,0), (1,0), (0,-1), (0, 1)]
+
+        var queue : [(Int, Int)] = [mousePosition]
+
+        while !queue.isEmpty {
+
+            let (x,y) = queue.removeFirst()
+            if x < 0 || x >= rows || y < 0 || y >= columns || visited[x][y] || maze[x][y] == "#" {
+                continue
+            }
+            
+            if maze[x][y] == "C" {
+                return true
+            }
+            visited[x][y] = true
+            for(dx, dy) in directions {
+                let newX = x + dx
+                let newY = y + dy
+                queue.append((newX,newY))
+            }
+        }
+        return false
+    }
+    
+    func findUniqueRobotMazePaths(_ n : Int) -> [String] {
+        var results = [String]()
+        var queue : [(String,Int, Int)] = [("",0,0)]
+        while !queue.isEmpty {
+            let (path, row, column) = queue.removeFirst()
+            if row == n - 1 && column == n - 1 {
+                results.append(path)
+                continue
+            }
+            if column < n - 1 {
+                queue.append((path + "R",row, column + 1))
+            }
+            if row < n - 1 {
+                queue.append((path + "D", row + 1, column))
+            }
+        }
+        return results
     }
 }
 
