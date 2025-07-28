@@ -1585,6 +1585,7 @@ class BlankSolution {
         
     }
     
+    // 50. Robot maze
     func findUniqueRobotMazePaths(_ n: Int) -> [String] {
         return []
         // 1.) Create an empty array called results to hold the final paths
@@ -2731,6 +2732,7 @@ class Solution {
         return false
     }
     
+    // 50. Robot maze
     func findUniqueRobotMazePaths(_ n : Int) -> [String] {
         var results = [String]()
         var queue : [(String,Int, Int)] = [("",0,0)]
